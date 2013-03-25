@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15b7d83d-4992-4287-a9cf-50175ededc1c}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>ExifProcessor.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>picvidDB</Name>
+    <RootNamespace>picvidDB</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DBHandler.py" />
+    <Compile Include="DBTester.py" />
+    <Compile Include="DirProcessor.py" />
+    <Compile Include="ExifProcessor.py" />
+    <Compile Include="FileBinder.py" />
+    <Compile Include="FileMetaData.py" />
+    <Compile Include="SqlCreateTableCmd.py" />
+    <Compile Include="SqlInsertTableCmd.py" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+</Project>
